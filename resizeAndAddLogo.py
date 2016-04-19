@@ -16,7 +16,7 @@ for filename in os.listdir('originals'):
     or filename == LOGO_FILENAME:
         continue # skip non-image files and the logo file itself
 
-    im = Image.open(filename)
+    im = Image.open(os.path.join('originals', filename))
     width, height = im.size
 
 #TODO: Check if file image needs to be resized
